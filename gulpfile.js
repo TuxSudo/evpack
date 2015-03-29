@@ -31,14 +31,12 @@ gulp.task('commonjs', ['clean', 'lint'],  function () {
 
 });
 
-
 gulp.task('lint', function(){
-    return gulp.src('es6/*.js')
+    return gulp.src(['es6/*.js', 'lib/*.js'])
         .pipe( $.jshint() )
         .pipe( $.jshint.reporter('default') )
         .pipe( $.jshint.reporter('fail') );
 });
-
 
 gulp.task('clean', function(){
     return gulp.src(['es5', 'commonjs'], {read: false})
