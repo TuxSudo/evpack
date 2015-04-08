@@ -1,3 +1,11 @@
+/* helper function to trigger another element's event
+
+Usage: 
+
+element1.addEventListner('click', triggerFromEvent(document.querySelector('.selector'), 'event.name', 'details' ) );
+
+
+*/
 "use strict";
 
 module.exports = function (element, eventName, detail) {
